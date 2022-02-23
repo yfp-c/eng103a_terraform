@@ -24,3 +24,5 @@
 - In order to get there, we can click the `windows` key on your keyboard. Enter type `env` and you'll see a pop-up - `edit the system environment variable`
 - click on `new` for user variables
 - add 2 environment variables 
+
+Enter `terraform init` after editing main.tf file to include provider and region
