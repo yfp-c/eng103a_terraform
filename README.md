@@ -189,4 +189,4 @@ variable "avail_zone" {
     default = "eu-west-1a"
 }
 ```
-
+To set up the app we made through terraform, we can use the ami of our ansible controller to configure our app.
