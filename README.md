@@ -151,6 +151,7 @@ resource "aws_route_table_association" "eng103a_yacob_tf_subnet_association" {
   subnet_id = aws_subnet.eng103_yacob_tf_vpc_publicSN.id
 }
 
+```
 With the variable file looking like...
 ```yml
 variable "app_ami_id" {
