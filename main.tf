@@ -116,3 +116,16 @@ resource "aws_route_table_association" "eng103a_yacob_tf_subnet_association" {
   route_table_id = aws_route_table.eng103a_yacob_tf_rt.id
   subnet_id = aws_subnet.eng103_yacob_tf_vpc_publicSN.id
 }
+
+resource "aws_launch_configuration" "as_conf_tf_yacob" {
+  name          = "as_conf_tf_yacob"
+  image_id      = var.app_ami_id.id
+  instance_type = "t2.micro"
+}
+
+resource "aws_autoscaling_group" "yacob_tf" {
+  min_size             = 1
+  max_size             = 3
+  desired_capacity     = 1
+  launch_configuration = aws_launch_configuration.as_conf_tf_yacob.id
+}
