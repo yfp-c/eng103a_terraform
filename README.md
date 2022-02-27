@@ -191,3 +191,13 @@ variable "avail_zone" {
 }
 ```
 To set up the app we made through terraform, we can use the ami of our ansible controller to configure our app.
+
+To stress test the CPU, install stress:
+```yml
+sudo apt-get install stress
+stress --cpu 2 --timeout 300
+```
+
+Terraform state: How does it treat information in main.tf?
+
+Difference between terraform plan and apply

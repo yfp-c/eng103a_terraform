@@ -19,7 +19,7 @@ variable "app_instance_name" {
 
 variable "key_pair_name" {
 
-    default = "eng103a_yacob"
+    default = "eng103a_yacob2"
 }
 
 variable "region" {
