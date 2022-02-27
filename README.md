@@ -198,6 +198,14 @@ sudo apt-get install stress
 stress --cpu 2 --timeout 300
 ```
 
-Terraform state: How does it treat information in main.tf?
+### Terraform state: How does it treat information in main.tf?
 
-Difference between terraform plan and apply
+State is terraform's way of understanding the current configuration of your infrastructure. By doing so, it keeps everything in sync as well as adding performance benefits. Also, if you're working on a team, it allows people to make sure that they don't override each other's changes. 
+
+**Performance benefits:** Only touch what has been detected as a change. Useful on huge projects
+
+### Difference between terraform plan and apply
+
+Plan: Generates a speculative plan of what it is going to deploy
+
+Apply: Same as plan but executes code after user permission.
